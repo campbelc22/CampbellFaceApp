@@ -11,7 +11,7 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
 
-        <SurfaceView
+        <up.edu.campbellfaceapp.Face
             android:id="@+id/surfaceView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -79,17 +79,48 @@
                     android:text="Hair Options" />
 
                 <Spinner
-                    android:id="@+id/spinner"
+                    android:id="@+id/hairSpinner"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content" />
             </LinearLayout>
 
-            <RadioButton
-                android:id="@+id/radioButton"
+            <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="RadioButton" />
+                android:orientation="vertical"
+                android:layout_weight="1">
+
+                <RadioGroup
+                    android:id="@+id/radioGroup"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical" >
+
+                    <RadioButton
+                        android:id="@+id/hairRadioButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="true"
+                        android:text="Hair" />
+                    <RadioButton
+                        android:id="@+id/eyesRadioButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:checked="false"
+                        android:text="Eyes" />
+                    <RadioButton
+                        android:id="@+id/skinRadioButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:checked="false"
+                        android:text="Skin" />
+
+                </RadioGroup>
+
+            </LinearLayout>
+
 
             <Button
                 android:id="@+id/randButton"
